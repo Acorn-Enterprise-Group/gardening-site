@@ -1,7 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:www.puregardening.uk)"
+      "WebFetch(domain:www.puregardening.uk)",
+      "Bash(powershell.exe -Command \"\\(Get-Content ''index.html'' -Raw\\) -replace '' -\\([a-zA-Z]\\)'', '' - $1'' | Set-Content ''index.html'' -NoNewline\")",
+      "Bash(powershell.exe -Command \"\\(Get-Content ''index.html'' -Raw\\) -replace ''\\\\r?\\\\n\\\\s*<source srcset=\"\"images/[^\"\"]+\\\\.webp\"\" type=\"\"image/webp\"\"\\\\s*/>'', '''' | Set-Content ''index.html'' -NoNewline\")",
+      "Bash(powershell.exe -Command @\":*)"
     ]
   }
 }

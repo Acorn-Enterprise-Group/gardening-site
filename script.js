@@ -1,5 +1,5 @@
 /* ============================================================
-   Pure Gardening Company — script.js
+   Pure Gardening Company - script.js
    Vanilla JS, no dependencies, 60fps target
    ============================================================ */
 
@@ -319,7 +319,7 @@ document.querySelectorAll('.why-mosaic-img img, .ba-slider-wrap img').forEach(im
       }
     } catch (err) {
       // Fallback: open mailto
-      const subject = encodeURIComponent('Garden Quote Request — ' + payload.name);
+      const subject = encodeURIComponent('Garden Quote Request - ' + payload.name);
       const body = encodeURIComponent(
         `Name: ${payload.name}\nLocation: ${payload.location}\nService: ${payload.service}\nContact preference: ${contactMethods.join(', ') || 'Not specified'}\n\nMessage:\n${payload.message}`
       );
