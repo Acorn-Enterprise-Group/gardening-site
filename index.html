@@ -3,28 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pure Gardening Company | Garden Care in New Forest &amp; Waterside</title>
+  <meta name="description" content="Expert garden maintenance for New Forest &amp; Waterside homes. Grass cutting, hedge trimming, garden clearances &amp; more. DBS checked, fully insured. Free quotes — call 07936 314207." />
 
-  <!-- ── SEO ── -->
-  <title>Pure Gardening Company | Garden Maintenance New Forest & Waterside</title>
-  <meta name="description" content="Professional garden maintenance serving the New Forest and Waterside area. Grass cutting, hedge trimming, garden tidy ups and seasonal preparation. Free quotes. Call 07936 314207." />
-  <link rel="canonical" href="https://www.puregardening.uk/" />
-
-  <!-- ── Open Graph ── -->
+  <!-- Open Graph -->
   <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Pure Gardening Company | New Forest &amp; Waterside" />
+  <meta property="og:description" content="Professional garden care for homes across Hythe, Totton, Dibden, Marchwood and the wider New Forest area. Reliable, insured, DBS checked." />
+  <meta property="og:image"       content="images/lawn-with-stripes.jpg" />
   <meta property="og:url"         content="https://www.puregardening.uk/" />
-  <meta property="og:title"       content="Pure Gardening Company | Garden Maintenance New Forest" />
-  <meta property="og:description" content="Reliable garden maintenance across the New Forest & Waterside. Grass cutting, hedge trimming, garden clearances and more. Free no-obligation quotes." />
-  <meta property="og:image"       content="https://www.puregardening.uk/images/lawn-with-stripes.jpg" />
   <meta name="twitter:card"       content="summary_large_image" />
 
-  <!-- ── LocalBusiness Structured Data ── -->
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.puregardening.uk/" />
+
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Favicon (inline SVG leaf) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='16' fill='%231a3a2e'/><path d='M16 6c0 0-8 5-8 12a8 8 0 0016 0C24 11 16 6 16 6z' fill='%23d4a574'/></svg>" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600;1,9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Critical CSS (nav + hero basics) -->
+  <style>
+    #nav{position:fixed;top:0;left:0;right:0;z-index:900;height:72px}
+    #hero{position:relative;min-height:100svh;display:flex;align-items:center}
+    .hero-bg{position:absolute;inset:0;z-index:0}
+    .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(160deg,rgba(26,58,46,.80) 0%,rgba(26,58,46,.55) 50%,rgba(26,58,46,.72) 100%)}
+  </style>
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- LocalBusiness structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Pure Gardening Company",
-    "description": "Professional garden maintenance serving the New Forest and Waterside area.",
-    "url": "https://www.puregardening.uk",
+    "description": "Professional garden maintenance for New Forest and Waterside homes — grass cutting, hedge trimming, garden clearances and more.",
+    "url": "https://www.puregardening.uk/",
     "telephone": "+447936314207",
     "email": "hello@puregardening.uk",
     "address": {
@@ -33,738 +55,963 @@
       "addressCountry": "GB"
     },
     "areaServed": [
-      "New Forest", "Hythe", "Totton", "Southampton",
-      "Dibden", "Marchwood", "Fawley", "Calmore", "Waterside"
+      "Hythe","Totton","Dibden","Marchwood","Fawley","Calmore",
+      "Waterside","New Forest","Southampton","Bursledon","Hedge End","Beaulieu"
     ],
-    "openingHours": "Mo-Sa 08:00-18:00",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
     "priceRange": "££",
-    "sameAs": [
-      "https://www.facebook.com/puregardeningco",
-      "https://tiktok.com/@puregardening"
-    ]
+    "image": "https://www.puregardening.uk/images/lawn-with-stripes.jpg"
   }
   </script>
-
-  <!-- ── Fonts ── -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- ═══════════════════════════════════════
-       STICKY CONTACT BAR
-  ═══════════════════════════════════════ -->
-  <div id="sticky-bar" role="complementary" aria-label="Quick contact">
-    <a href="tel:07936314207" class="sticky-item" aria-label="Call 07936 314207">
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-      <span class="sticky-label">Call</span>
-      <span class="sticky-number">07936 314207</span>
+<!-- Skip link for keyboard/screen-reader users -->
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- ══════════════════════════════════════════════════════════
+     NAVIGATION
+══════════════════════════════════════════════════════════ -->
+<header id="nav" role="banner">
+  <nav class="container" aria-label="Main navigation">
+    <!-- Logo -->
+    <a href="#hero" class="nav-logo" aria-label="Pure Gardening Company — home">
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+        <circle cx="18" cy="18" r="18" fill="#d4a574" opacity="0.18"/>
+        <path d="M18 7C18 7 10 13 10 20a8 8 0 0016 0C26 13 18 7 18 7z" fill="#d4a574"/>
+        <rect x="17" y="20" width="2" height="8" rx="1" fill="#1a3a2e"/>
+      </svg>
+      <span>
+        <span class="nav-logo-name">Pure Gardening</span>
+        <span class="nav-logo-sub">New Forest &amp; Waterside</span>
+      </span>
     </a>
-    <a href="https://wa.me/447936314207" class="sticky-item sticky-item--whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp us">
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      <span class="sticky-label">WhatsApp</span>
+
+    <!-- Desktop links -->
+    <ul class="nav-links" role="list">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Our Work</a></li>
+      <li><a href="#areas">Areas</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <!-- Desktop CTA -->
+    <a href="#contact" class="btn btn--primary btn--sm nav-cta">Get Free Quote</a>
+
+    <!-- Mobile hamburger -->
+    <button class="nav-hamburger" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- ══════════════════════════════════════════════════════════
+     MOBILE NAV PANEL
+══════════════════════════════════════════════════════════ -->
+<div id="mobile-nav" class="mobile-nav" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <div class="mobile-nav-header">
+    <a href="#hero" class="nav-logo" onclick="closeMobileNav()">
+      <svg width="32" height="32" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+        <circle cx="18" cy="18" r="18" fill="#d4a574" opacity="0.18"/>
+        <path d="M18 7C18 7 10 13 10 20a8 8 0 0016 0C26 13 18 7 18 7z" fill="#d4a574"/>
+        <rect x="17" y="20" width="2" height="8" rx="1" fill="#1a3a2e"/>
+      </svg>
+      <span>
+        <span class="nav-logo-name" style="color:var(--forest)">Pure Gardening</span>
+        <span class="nav-logo-sub">New Forest &amp; Waterside</span>
+      </span>
     </a>
-    <a href="mailto:hello@puregardening.uk" class="sticky-item" aria-label="Email us">
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-      <span class="sticky-label">Email</span>
-    </a>
-    <div class="sticky-divider"></div>
-    <a href="https://www.facebook.com/puregardeningco" class="sticky-item sticky-item--social" target="_blank" rel="noopener" aria-label="Facebook">
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-    </a>
-    <a href="https://tiktok.com/@puregardening" class="sticky-item sticky-item--social" target="_blank" rel="noopener" aria-label="TikTok">
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.97a8.24 8.24 0 004.84 1.55V7.07a4.85 4.85 0 01-1.07-.38z"/></svg>
+    <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close menu">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <path d="M4 4l12 12M16 4L4 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+
+  <nav class="mobile-nav-links" aria-label="Mobile navigation">
+    <a href="#services" onclick="closeMobileNav()">Services</a>
+    <a href="#why-us"   onclick="closeMobileNav()">Why Choose Us</a>
+    <a href="#portfolio" onclick="closeMobileNav()">Our Work</a>
+    <a href="#areas"    onclick="closeMobileNav()">Areas We Cover</a>
+    <a href="#contact"  onclick="closeMobileNav()">Contact</a>
+  </nav>
+
+  <div class="mobile-nav-cta">
+    <a href="#contact" class="btn btn--primary btn--lg" onclick="closeMobileNav()">Get Free Quote</a>
+    <a href="https://wa.me/447936314207?text=Hi!%20I%20found%20your%20website%20and%20I%27m%20interested%20in%20garden%20services." class="btn btn--wa btn--lg" target="_blank" rel="noopener">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.12 1.524 5.855L0 24l6.335-1.509A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.89 0-3.663-.5-5.197-1.375l-.373-.22-3.863.92.979-3.768-.243-.387A9.953 9.953 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+      WhatsApp Us
     </a>
   </div>
 
-  <!-- ═══════════════════════════════════════
-       NAVIGATION
-  ═══════════════════════════════════════ -->
-  <header id="nav" role="banner">
-    <div class="nav-inner container">
-      <a href="#" class="nav-logo" aria-label="Pure Gardening Company home">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/><path d="M12 2c0 0-4 4-4 10s4 10 4 10"/><path d="M2 12h20"/><path d="M12 2c0 0 4 4 4 10s-4 10-4 10"/></svg>
-        <span>Pure Gardening Company</span>
-      </a>
-      <nav aria-label="Main navigation">
-        <a href="#quote" class="btn btn--nav">Free Quote</a>
-      </nav>
+  <div class="mobile-nav-contact">
+    <p>Call us directly</p>
+    <a href="tel:+447936314207">07936 314207</a>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     MAIN CONTENT
+══════════════════════════════════════════════════════════ -->
+<main id="main">
+
+  <!-- ── HERO ──────────────────────────────────────────────── -->
+  <section id="hero" aria-label="Hero">
+    <div class="hero-bg">
+      <picture>
+        <source srcset="images/lawn-with-stripes.webp" type="image/webp" />
+        <img src="images/lawn-with-stripes.jpg" alt="Beautifully striped lawn maintained by Pure Gardening Company" fetchpriority="high" />
+      </picture>
     </div>
-  </header>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-overlay-warm" aria-hidden="true"></div>
 
-  <!-- ═══════════════════════════════════════
-       FLOATING WHATSAPP BUTTON
-  ═══════════════════════════════════════ -->
-  <a href="https://wa.me/447936314207" id="whatsapp-fab" class="whatsapp-fab" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    <span class="fab-label">WhatsApp</span>
-  </a>
+    <div class="hero-content">
+      <div class="container">
+        <span class="hero-badge" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1l1.5 3 3.3.5-2.4 2.3.6 3.2L7 8.5l-3 1.5.6-3.2L2.2 4.5l3.3-.5L7 1z" fill="currentColor"/></svg>
+          New Forest &amp; Waterside
+        </span>
 
-  <main>
+        <h1 class="hero-headline">Your Garden.<br><em>Our Craft.</em></h1>
 
-    <!-- ═══════════════════════════════════════
-         HERO
-    ═══════════════════════════════════════ -->
-    <section id="hero" aria-label="Hero">
-      <div class="hero-bg" aria-hidden="true">
-        <svg class="hero-svg" viewBox="0 0 1440 500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-          <defs>
-            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1B4332"/><stop offset="100%" stop-color="#40916C"/></linearGradient>
-            <linearGradient id="hill1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#52B788"/><stop offset="100%" stop-color="#40916C"/></linearGradient>
-            <linearGradient id="hill2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#74C69D"/><stop offset="100%" stop-color="#52B788"/></linearGradient>
-            <linearGradient id="hill3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#95D5B2"/><stop offset="100%" stop-color="#74C69D"/></linearGradient>
-          </defs>
-          <rect width="1440" height="500" fill="url(#sky)"/>
-          <path d="M0 320 Q200 240 400 300 Q600 360 800 280 Q1000 200 1200 280 Q1350 330 1440 310 L1440 500 L0 500Z" fill="url(#hill1)" opacity="0.7"/>
-          <path d="M0 380 Q180 330 360 370 Q540 410 720 350 Q900 290 1080 360 Q1260 420 1440 380 L1440 500 L0 500Z" fill="url(#hill2)" opacity="0.85"/>
-          <path d="M0 440 Q120 410 240 430 Q360 450 480 420 Q600 390 720 430 Q840 470 960 440 Q1080 410 1200 440 Q1320 465 1440 450 L1440 500 L0 500Z" fill="url(#hill3)"/>
-          <g fill="#1B4332" opacity="0.9"><polygon points="80,320 60,380 100,380"/><polygon points="80,290 55,350 105,350"/><rect x="76" y="380" width="8" height="20" fill="#40916C"/></g>
-          <g fill="#2D6A4F" opacity="0.9"><polygon points="150,330 125,395 175,395"/><polygon points="150,300 120,365 180,365"/><rect x="146" y="395" width="8" height="18" fill="#52B788"/></g>
-          <g fill="#1B4332" opacity="0.9"><polygon points="1280,310 1260,375 1300,375"/><polygon points="1280,280 1250,345 1310,345"/><rect x="1276" y="375" width="8" height="20" fill="#40916C"/></g>
-          <g fill="#2D6A4F" opacity="0.9"><polygon points="1360,325 1335,390 1385,390"/><polygon points="1360,295 1330,360 1390,360"/><rect x="1356" y="390" width="8" height="18" fill="#52B788"/></g>
-          <ellipse cx="720" cy="430" rx="120" ry="40" fill="#2D6A4F" opacity="0.6"/>
-          <ellipse cx="680" cy="425" rx="70" ry="35" fill="#40916C" opacity="0.7"/>
-          <ellipse cx="760" cy="425" rx="80" ry="32" fill="#40916C" opacity="0.7"/>
-          <circle cx="220" cy="450" r="6" fill="#D8F3DC" opacity="0.9"/>
-          <circle cx="240" cy="445" r="5" fill="#B7E4C7" opacity="0.9"/>
-          <circle cx="260" cy="452" r="7" fill="#D8F3DC" opacity="0.8"/>
-          <circle cx="1180" cy="450" r="6" fill="#D8F3DC" opacity="0.9"/>
-          <circle cx="1200" cy="445" r="5" fill="#B7E4C7" opacity="0.9"/>
-          <circle cx="1220" cy="452" r="7" fill="#D8F3DC" opacity="0.8"/>
-          <circle cx="1100" cy="80" r="50" fill="#74C69D" opacity="0.15"/>
-          <circle cx="1100" cy="80" r="30" fill="#95D5B2" opacity="0.2"/>
-        </svg>
-      </div>
+        <p class="hero-subline">Professional garden care for homes across the New Forest &amp; Waterside — rooted in experience, grown with care.</p>
 
-      <div class="hero-content container">
-        <div class="hero-badge scroll-reveal">New Forest &amp; Waterside</div>
-        <h1 class="hero-title scroll-reveal" style="--delay:0.1s">
-          Beautiful Gardens.<br/>Reliable Service.
-        </h1>
-        <p class="hero-sub scroll-reveal" style="--delay:0.2s">
-          Professional garden maintenance for homes across<br class="br-hide"/> the New Forest &amp; Waterside area.
-        </p>
-        <div class="hero-ctas scroll-reveal" style="--delay:0.3s">
-          <a href="#quote" class="btn btn--hero">Request a Free Quote</a>
-          <a href="https://wa.me/447936314207" class="btn btn--hero-wa" target="_blank" rel="noopener">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Message Us Now
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn--primary btn--lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M9 12l2 2 4-4"/><rect x="3" y="3" width="18" height="18" rx="3"/></svg>
+            Request Free Quote
+          </a>
+          <a href="https://wa.me/447936314207?text=Hi!%20I%20found%20your%20website%20and%20I%27m%20interested%20in%20garden%20services." class="btn btn--wa btn--lg" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.12 1.524 5.855L0 24l6.335-1.509A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.89 0-3.663-.5-5.197-1.375l-.373-.22-3.863.92.979-3.768-.243-.387A9.953 9.953 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            WhatsApp Us
           </a>
         </div>
-        <p class="hero-phone scroll-reveal" style="--delay:0.4s">
-          Or call us: <a href="tel:07936314207">07936 314207</a>
-        </p>
-      </div>
 
-      <a href="#social-proof" class="hero-scroll-arrow" aria-label="Scroll down">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-      </a>
-    </section>
+        <p class="hero-phone">Or call us: <a href="tel:+447936314207">07936 314207</a></p>
 
-    <!-- ═══════════════════════════════════════
-         SOCIAL PROOF STRIP
-    ═══════════════════════════════════════ -->
-    <section id="social-proof" aria-label="Quick facts">
-      <div class="container">
-        <div class="proof-grid">
-          <div class="proof-item scroll-reveal">
-            <span class="proof-number">10+</span>
-            <span class="proof-label">Years Experience</span>
+        <div class="hero-trust" aria-label="Trust indicators">
+          <div class="hero-trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+            10+ Years Experience
           </div>
-          <div class="proof-divider" aria-hidden="true"></div>
-          <div class="proof-item scroll-reveal" style="--delay:0.08s">
-            <span class="proof-number">★★★★★</span>
-            <span class="proof-label">5-Star Rated</span>
+          <div class="hero-trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+            5-Star Rated
           </div>
-          <div class="proof-divider" aria-hidden="true"></div>
-          <div class="proof-item scroll-reveal" style="--delay:0.16s">
-            <span class="proof-number">DBS</span>
-            <span class="proof-label">Checked &amp; Insured</span>
+          <div class="hero-trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+            DBS Checked
           </div>
-          <div class="proof-divider" aria-hidden="true"></div>
-          <div class="proof-item scroll-reveal" style="--delay:0.24s">
-            <span class="proof-number">Free</span>
-            <span class="proof-label">No-Obligation Quotes</span>
+          <div class="hero-trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+            Fully Insured
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- ═══════════════════════════════════════
-         SERVICES
-    ═══════════════════════════════════════ -->
-    <section id="services" aria-labelledby="services-heading">
-      <div class="container">
-        <div class="section-label scroll-reveal">What We Do</div>
-        <h2 id="services-heading" class="section-title scroll-reveal" style="--delay:0.1s">Our Garden Services</h2>
-        <p class="section-sub scroll-reveal" style="--delay:0.15s">Everything your garden needs, handled with care and over 10 years of expertise.</p>
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="hero-scroll-bar"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
 
-        <div class="services-grid">
-
-          <div class="card scroll-reveal" style="--delay:0.1s">
-            <div class="card-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-                <rect x="8" y="38" width="48" height="10" rx="5" fill="#52B788"/>
-                <rect x="14" y="30" width="36" height="10" rx="5" fill="#2D6A4F"/>
-                <circle cx="18" cy="50" r="6" fill="#1B4332"/>
-                <circle cx="46" cy="50" r="6" fill="#1B4332"/>
-                <rect x="28" y="20" width="4" height="14" rx="2" fill="#40916C"/>
-                <path d="M22 20 Q32 12 42 20" stroke="#40916C" stroke-width="3" fill="none" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3 class="card-title">Grass Cutting</h3>
-            <p class="card-desc">Regular mowing to keep your lawn looking lush, neat and perfectly manicured all season long.</p>
-          </div>
-
-          <div class="card scroll-reveal" style="--delay:0.15s">
-            <div class="card-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-                <rect x="8" y="28" width="48" height="16" rx="4" fill="#52B788"/>
-                <rect x="8" y="44" width="48" height="8" rx="3" fill="#2D6A4F"/>
-                <rect x="10" y="18" width="6" height="14" rx="2" fill="#40916C"/>
-                <rect x="48" y="18" width="6" height="14" rx="2" fill="#40916C"/>
-                <path d="M10 28 L8 14 L14 16 L16 28" fill="#1B4332"/>
-                <path d="M54 28 L56 14 L50 16 L48 28" fill="#1B4332"/>
-              </svg>
-            </div>
-            <h3 class="card-title">Hedge Cutting</h3>
-            <p class="card-desc">Precision trimming and shaping of hedges and topiary to enhance your garden's structure and kerb appeal.</p>
-          </div>
-
-          <div class="card scroll-reveal" style="--delay:0.2s">
-            <div class="card-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-                <path d="M12 52 L28 20" stroke="#40916C" stroke-width="4" stroke-linecap="round"/>
-                <path d="M28 20 L38 12 L44 18 L36 28 L28 20Z" fill="#2D6A4F"/>
-                <circle cx="40" cy="38" r="10" fill="#52B788" opacity="0.8"/>
-                <circle cx="40" cy="38" r="5" fill="#2D6A4F"/>
-                <path d="M40 28 Q46 32 46 38" stroke="#1B4332" stroke-width="2" stroke-linecap="round" fill="none"/>
-              </svg>
-            </div>
-            <h3 class="card-title">Border Work &amp; Weeding</h3>
-            <p class="card-desc">Careful weeding, planting and border maintenance to keep flower beds thriving and weed-free.</p>
-          </div>
-
-          <div class="card scroll-reveal" style="--delay:0.25s">
-            <div class="card-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-                <ellipse cx="38" cy="28" rx="18" ry="14" fill="#52B788"/>
-                <path d="M20 28 L10 44 L52 44 L42 28" fill="#2D6A4F"/>
-                <rect x="8" y="42" width="44" height="6" rx="3" fill="#1B4332"/>
-                <line x1="8" y1="44" x2="4" y2="52" stroke="#40916C" stroke-width="3" stroke-linecap="round"/>
-                <circle cx="4" cy="54" r="3" fill="#2D6A4F"/>
-              </svg>
-            </div>
-            <h3 class="card-title">Garden Clearances</h3>
-            <p class="card-desc">Full garden clearances for overgrown spaces, including removal and responsible disposal of all green waste.</p>
-          </div>
-
-          <div class="card scroll-reveal" style="--delay:0.3s">
-            <div class="card-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-                <path d="M30 12 L34 12 L44 44 L20 44 Z" fill="#2D6A4F"/>
-                <rect x="18" y="44" width="28" height="5" rx="2" fill="#1B4332"/>
-                <path d="M32 12 L32 8" stroke="#40916C" stroke-width="3" stroke-linecap="round"/>
-                <line x1="24" y1="44" x2="22" y2="54" stroke="#52B788" stroke-width="3" stroke-linecap="round"/>
-                <line x1="28" y1="44" x2="27" y2="54" stroke="#52B788" stroke-width="3" stroke-linecap="round"/>
-                <line x1="32" y1="44" x2="32" y2="54" stroke="#52B788" stroke-width="3" stroke-linecap="round"/>
-                <line x1="36" y1="44" x2="37" y2="54" stroke="#52B788" stroke-width="3" stroke-linecap="round"/>
-                <line x1="40" y1="44" x2="42" y2="54" stroke="#52B788" stroke-width="3" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3 class="card-title">Garden Tidy Ups</h3>
-            <p class="card-desc">One-off or seasonal tidy ups to restore order and beauty to neglected or overgrown gardens.</p>
-          </div>
-
-          <div class="card scroll-reveal" style="--delay:0.35s">
-            <div class="card-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-                <path d="M32 8 C20 8 12 20 12 30 C12 44 32 56 32 56 C32 56 52 44 52 30 C52 20 44 8 32 8Z" fill="#52B788" opacity="0.4"/>
-                <path d="M32 14 C24 14 18 22 18 30 C18 40 32 50 32 50 C32 50 46 40 46 30 C46 22 40 14 32 14Z" fill="#2D6A4F"/>
-                <path d="M32 50 L32 18" stroke="#52B788" stroke-width="2" stroke-linecap="round"/>
-                <path d="M32 28 Q26 26 22 22" stroke="#74C69D" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-                <path d="M32 34 Q26 32 20 30" stroke="#74C69D" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-                <path d="M32 28 Q38 26 42 22" stroke="#74C69D" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-                <path d="M32 34 Q38 32 44 30" stroke="#74C69D" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-              </svg>
-            </div>
-            <h3 class="card-title">Seasonal Preparation</h3>
-            <p class="card-desc">Spring and autumn preparation to get your garden ready for every season — pruning, planting and more.</p>
-          </div>
-
+  <!-- ── PROOF STRIP ───────────────────────────────────────── -->
+  <section class="proof-strip" aria-label="Trust highlights">
+    <div class="container">
+      <div class="proof-item">
+        <div class="proof-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        </div>
+        <div class="proof-text">
+          <strong>10+ Years</strong>
+          <span>of garden care</span>
         </div>
       </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════
-         TRUST
-    ═══════════════════════════════════════ -->
-    <section id="trust" aria-labelledby="trust-heading">
-      <div class="container">
-        <div class="section-label scroll-reveal">Our Promise</div>
-        <h2 id="trust-heading" class="section-title scroll-reveal" style="--delay:0.1s">Why Choose Pure Gardening Company</h2>
-        <p class="section-sub scroll-reveal" style="--delay:0.15s">Trusted by homeowners across the New Forest for reliable, professional garden care.</p>
-
-        <div class="trust-grid">
-
-          <div class="trust-card scroll-reveal" style="--delay:0.1s">
-            <div class="trust-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-                <circle cx="20" cy="20" r="18" fill="#D8F3DC"/>
-                <path d="M12 20 L17 25 L28 14" stroke="#2D6A4F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <h3>Reliable Service</h3>
-            <p>We show up on time, every time. Consistent, dependable care you can count on.</p>
-          </div>
-
-          <div class="trust-card scroll-reveal" style="--delay:0.15s">
-            <div class="trust-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-                <circle cx="20" cy="20" r="18" fill="#D8F3DC"/>
-                <path d="M20 10 L22.5 16.5 L30 16.5 L24 20.5 L26.5 27 L20 23 L13.5 27 L16 20.5 L10 16.5 L17.5 16.5 Z" fill="#2D6A4F"/>
-              </svg>
-            </div>
-            <h3>10+ Years Experience</h3>
-            <p>Over a decade of professional gardening expertise delivering outstanding results.</p>
-          </div>
-
-          <div class="trust-card scroll-reveal" style="--delay:0.2s">
-            <div class="trust-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-                <circle cx="20" cy="20" r="18" fill="#D8F3DC"/>
-                <rect x="13" y="12" width="14" height="18" rx="3" stroke="#2D6A4F" stroke-width="2" fill="none"/>
-                <circle cx="20" cy="18" r="3" fill="#2D6A4F"/>
-                <path d="M16 26 Q20 22 24 26" stroke="#2D6A4F" stroke-width="2" stroke-linecap="round" fill="none"/>
-              </svg>
-            </div>
-            <h3>DBS Checked</h3>
-            <p>Fully DBS checked for your peace of mind when welcoming us into your home and garden.</p>
-          </div>
-
-          <div class="trust-card scroll-reveal" style="--delay:0.25s">
-            <div class="trust-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-                <circle cx="20" cy="20" r="18" fill="#D8F3DC"/>
-                <path d="M20 10 L28 14 L28 22 C28 27 24 30 20 31 C16 30 12 27 12 22 L12 14 Z" stroke="#2D6A4F" stroke-width="2" fill="none"/>
-                <path d="M16 21 L19 24 L25 17" stroke="#2D6A4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <h3>Waste Licence Holder</h3>
-            <p>Licensed to remove and responsibly dispose of all garden waste — no skips needed.</p>
-          </div>
-
-          <div class="trust-card scroll-reveal" style="--delay:0.3s">
-            <div class="trust-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-                <circle cx="20" cy="20" r="18" fill="#D8F3DC"/>
-                <path d="M20 11 C15 11 11 15 11 20 C11 25 15 29 20 29 C25 29 29 25 29 20 C29 15 25 11 20 11Z" stroke="#2D6A4F" stroke-width="2" fill="none"/>
-                <path d="M14 20 C14 20 16 14 20 14 C24 14 26 20 26 20" stroke="#2D6A4F" stroke-width="2" stroke-linecap="round" fill="none"/>
-              </svg>
-            </div>
-            <h3>Fully Insured</h3>
-            <p>Comprehensive public liability insurance for complete protection on every job.</p>
-          </div>
-
+      <div class="proof-item">
+        <div class="proof-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2l2.4 4.8 5.3.8-3.85 3.75.91 5.32L12 14.1l-4.76 2.55.91-5.32L4.3 7.6l5.3-.8L12 2z"/></svg>
+        </div>
+        <div class="proof-text">
+          <strong>5-Star Rated</strong>
+          <span>by local homeowners</span>
         </div>
       </div>
-    </section>
+      <div class="proof-item">
+        <div class="proof-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2l2 7h7l-5.7 4.1 2.2 6.9L12 16 6.5 20l2.2-6.9L3 9h7z"/></svg>
+        </div>
+        <div class="proof-text">
+          <strong>DBS Checked</strong>
+          <span>safe &amp; trustworthy</span>
+        </div>
+      </div>
+      <div class="proof-item">
+        <div class="proof-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2l7 4v6c0 5-3.5 9.7-7 11-3.5-1.3-7-6-7-11V6z"/></svg>
+        </div>
+        <div class="proof-text">
+          <strong>Fully Insured</strong>
+          <span>public liability covered</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- ═══════════════════════════════════════
-         HOW IT WORKS
-    ═══════════════════════════════════════ -->
-    <section id="how-it-works" aria-labelledby="hiw-heading">
-      <div class="container">
-        <div class="section-label scroll-reveal">Simple Process</div>
-        <h2 id="hiw-heading" class="section-title scroll-reveal" style="--delay:0.1s">How It Works</h2>
-        <p class="section-sub scroll-reveal" style="--delay:0.15s">Getting a beautiful garden has never been easier.</p>
+  <!-- ── SERVICES ──────────────────────────────────────────── -->
+  <section id="services" class="section section--cream" aria-labelledby="services-heading">
+    <div class="container">
+      <header class="section-header">
+        <span class="section-label">What We Do</span>
+        <h2 id="services-heading" class="reveal">Garden care, done properly.</h2>
+        <p class="reveal delay-1">We cut your grass, trim your hedges, and keep your borders weed-free — simple as that. No jargon, no fuss, just a garden you'll actually want to spend time in.</p>
+      </header>
 
-        <div class="steps-grid">
+      <div class="services-grid">
+        <!-- Grass Cutting -->
+        <article class="service-card reveal delay-1">
+          <div class="service-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="14" width="20" height="4" rx="2"/>
+              <path d="M5 14V10a1 1 0 011-1h3l2-4 2 4h3a1 1 0 011 1v4"/>
+              <path d="M9 14v-4M15 14v-4"/>
+              <circle cx="5" cy="20" r="2"/><circle cx="19" cy="20" r="2"/>
+            </svg>
+          </div>
+          <h3>Grass Cutting</h3>
+          <p>A neat lawn makes the whole garden sing. We mow, edge, and blow away the clippings — leaving you with those satisfying stripes every time.</p>
+        </article>
 
-          <div class="step scroll-reveal" style="--delay:0.1s">
-            <div class="step-number">01</div>
-            <div class="step-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" fill="none">
-                <circle cx="28" cy="28" r="26" fill="#D8F3DC"/>
-                <path d="M18 28 L22 32 L38 16" stroke="#2D6A4F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                <rect x="14" y="20" width="28" height="20" rx="4" stroke="#40916C" stroke-width="2" fill="none" opacity="0.4"/>
-              </svg>
+        <!-- Hedge Cutting -->
+        <article class="service-card reveal delay-2">
+          <div class="service-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 20h18M5 20v-5a4 4 0 018 0v5M13 20v-7a4 4 0 018 0v7"/>
+              <path d="M2 12h4M18 8h4"/>
+            </svg>
+          </div>
+          <h3>Hedge Cutting</h3>
+          <p>Sharp, clean lines that make your property look cared for from the kerb. We handle all heights and shapes, including the tricky ones against walls and fences.</p>
+        </article>
+
+        <!-- Border Work -->
+        <article class="service-card reveal delay-3">
+          <div class="service-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 21l5-5M8 16l8-12M16 4l4 4M12 8l4-4"/>
+              <path d="M3 21c4-4 7-6 10-4"/>
+            </svg>
+          </div>
+          <h3>Border Work &amp; Weeding</h3>
+          <p>Overgrown borders drain a garden's character. We get in among the plants, clear the weeds, and give your beds room to breathe and look their best.</p>
+        </article>
+
+        <!-- Garden Clearances -->
+        <article class="service-card reveal delay-1">
+          <div class="service-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 17l3-9 4 4 3-8 3 6 3-3 2 10"/>
+              <circle cx="6" cy="20" r="2"/><path d="M8 20h10"/>
+              <path d="M14 17l2 3"/>
+            </svg>
+          </div>
+          <h3>Garden Clearances</h3>
+          <p>Inherited a jungle? Moving home? We clear overgrown gardens completely — all waste is removed using our licensed waste carrier licence, responsibly disposed of.</p>
+        </article>
+
+        <!-- Garden Tidy Ups -->
+        <article class="service-card reveal delay-2">
+          <div class="service-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 21l4-14 5 10 3-6 4 10"/>
+              <path d="M6 9c0-3 6-7 6-7s6 4 6 7a6 6 0 01-12 0z"/>
+            </svg>
+          </div>
+          <h3>Garden Tidy Ups</h3>
+          <p>Sometimes a garden just needs a proper sort-out — deadheading, pruning, sweeping, and bagging. A few hours with us and it looks like a different place.</p>
+        </article>
+
+        <!-- Seasonal Preparation -->
+        <article class="service-card reveal delay-3">
+          <div class="service-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+              <circle cx="12" cy="12" r="4"/>
+            </svg>
+          </div>
+          <h3>Seasonal Preparation</h3>
+          <p>Get your garden ready for whatever's coming — spring feeding and mulching, autumn leaf clearance, or winter cutting-back. We keep things healthy year-round.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WHY CHOOSE US ─────────────────────────────────────── -->
+  <section id="why-us" class="section section--white" aria-labelledby="why-heading">
+    <div class="container">
+      <div class="why-grid">
+        <!-- Image mosaic -->
+        <div class="why-mosaic reveal" aria-hidden="true">
+          <div class="why-mosaic-img">
+            <picture>
+              <source srcset="images/van.webp" type="image/webp"/>
+              <img src="images/van.jpg" alt="Pure Gardening branded van" loading="lazy" decoding="async"/>
+            </picture>
+          </div>
+          <div class="why-mosaic-img">
+            <picture>
+              <source srcset="images/stripes.webp" type="image/webp"/>
+              <img src="images/stripes.jpg" alt="Precision lawn stripes" loading="lazy" decoding="async"/>
+            </picture>
+          </div>
+          <div class="why-mosaic-img">
+            <picture>
+              <source srcset="images/landscaping.webp" type="image/webp"/>
+              <img src="images/landscaping.jpg" alt="Garden landscaping work" loading="lazy" decoding="async"/>
+            </picture>
+          </div>
+          <div class="why-mosaic-img">
+            <picture>
+              <source srcset="images/before-after-1.webp" type="image/webp"/>
+              <img src="images/before-after-1.jpg" alt="Garden transformation" loading="lazy" decoding="async"/>
+            </picture>
+          </div>
+        </div>
+
+        <!-- Features content -->
+        <div class="why-content">
+          <span class="section-label reveal">Why Pure Gardening?</span>
+          <h2 id="why-heading" class="reveal delay-1">We show up. We do good work. Every time.</h2>
+
+          <div class="why-features">
+            <div class="why-feature reveal delay-1">
+              <div class="why-feature-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+              </div>
+              <div class="why-feature-body">
+                <h4>Reliable Service</h4>
+                <p>We turn up when we say we will. If something changes, we let you know — because your time matters.</p>
+              </div>
             </div>
+            <div class="why-feature reveal delay-2">
+              <div class="why-feature-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+              </div>
+              <div class="why-feature-body">
+                <h4>10+ Years Experience</h4>
+                <p>A decade of New Forest gardens means we know how local soil, climate, and growth patterns work — and how to get the best from them.</p>
+              </div>
+            </div>
+            <div class="why-feature reveal delay-3">
+              <div class="why-feature-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 2l7 4v6c0 5-3.5 9.7-7 11-3.5-1.3-7-6-7-11V6z"/></svg>
+              </div>
+              <div class="why-feature-body">
+                <h4>DBS Checked</h4>
+                <p>We're DBS checked and vetted — so you can feel comfortable leaving us to work in your garden while you're out.</p>
+              </div>
+            </div>
+            <div class="why-feature reveal delay-4">
+              <div class="why-feature-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="2" y="7" width="20" height="13" rx="2"/><path d="M16 7V5a4 4 0 00-8 0v2"/></svg>
+              </div>
+              <div class="why-feature-body">
+                <h4>Licensed Waste Removal</h4>
+                <p>All green waste and rubbish is removed and disposed of legally and responsibly. No skips, no mess left behind.</p>
+              </div>
+            </div>
+            <div class="why-feature reveal delay-5">
+              <div class="why-feature-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M9 12l2 2 4-4M12 2l7 4v6c0 5-3.5 9.7-7 11-3.5-1.3-7-6-7-11V6z"/></svg>
+              </div>
+              <div class="why-feature-body">
+                <h4>Fully Insured</h4>
+                <p>Full public liability insurance means you're completely covered. We work safely and professionally on every job.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="why-stats reveal">
+            <div class="why-stat-item">
+              <strong>10+</strong>
+              <span>Years in the trade</span>
+            </div>
+            <div class="why-stat-item">
+              <strong>100s</strong>
+              <span>Gardens cared for</span>
+            </div>
+            <div class="why-stat-item">
+              <strong>5★</strong>
+              <span>Average rating</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HOW IT WORKS ──────────────────────────────────────── -->
+  <section id="how-it-works" class="section section--apricot" aria-labelledby="hiw-heading">
+    <div class="container">
+      <header class="section-header" style="text-align:center;max-width:600px;margin-inline:auto">
+        <span class="section-label reveal">Simple Process</span>
+        <h2 id="hiw-heading" class="reveal delay-1">From first call to beautiful garden.</h2>
+        <p class="reveal delay-2">Getting started is easy. No long waits, no complicated back-and-forth — just a quick conversation and we take it from there.</p>
+      </header>
+
+      <div class="steps-grid">
+        <div class="step reveal delay-1">
+          <div class="step-num" aria-hidden="true">1</div>
+          <div class="step-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          </div>
+          <div class="step-content">
             <h3>Request a Quote</h3>
-            <p>Fill in our simple form or give us a call. We'll get back to you quickly with a free, no-obligation quote.</p>
+            <p>Fill in the form, drop us a WhatsApp, or give us a call. Tell us what your garden needs and we'll come back to you quickly with a fair, no-obligation quote.</p>
           </div>
+        </div>
 
-          <div class="step-connector" aria-hidden="true"></div>
-
-          <div class="step scroll-reveal" style="--delay:0.2s">
-            <div class="step-number">02</div>
-            <div class="step-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" fill="none">
-                <circle cx="28" cy="28" r="26" fill="#D8F3DC"/>
-                <rect x="14" y="16" width="28" height="26" rx="4" stroke="#2D6A4F" stroke-width="2" fill="none"/>
-                <line x1="14" y1="23" x2="42" y2="23" stroke="#2D6A4F" stroke-width="2"/>
-                <line x1="20" y1="12" x2="20" y2="20" stroke="#40916C" stroke-width="2.5" stroke-linecap="round"/>
-                <line x1="36" y1="12" x2="36" y2="20" stroke="#40916C" stroke-width="2.5" stroke-linecap="round"/>
-                <circle cx="22" cy="31" r="2" fill="#2D6A4F"/>
-                <circle cx="28" cy="31" r="2" fill="#2D6A4F"/>
-                <circle cx="34" cy="31" r="2" fill="#2D6A4F"/>
-              </svg>
-            </div>
+        <div class="step reveal delay-2">
+          <div class="step-num" aria-hidden="true">2</div>
+          <div class="step-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          </div>
+          <div class="step-content">
             <h3>We Schedule Your Visit</h3>
-            <p>We agree a convenient time and our team arrives fully equipped, ready to transform your garden.</p>
+            <p>We'll agree a date and time that works for you — regular visits or a one-off job. We work around your schedule, not the other way around.</p>
           </div>
+        </div>
 
-          <div class="step-connector" aria-hidden="true"></div>
-
-          <div class="step scroll-reveal" style="--delay:0.3s">
-            <div class="step-number">03</div>
-            <div class="step-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" fill="none">
-                <circle cx="28" cy="28" r="26" fill="#D8F3DC"/>
-                <path d="M16 38 Q28 16 40 38" stroke="#2D6A4F" stroke-width="2" fill="#52B788" opacity="0.5"/>
-                <circle cx="28" cy="22" r="6" fill="#2D6A4F"/>
-                <path d="M22 30 Q28 24 34 30" fill="#2D6A4F"/>
-                <path d="M20 40 Q28 32 36 40" stroke="#40916C" stroke-width="2" fill="none" stroke-linecap="round"/>
-              </svg>
-            </div>
+        <div class="step reveal delay-3">
+          <div class="step-num" aria-hidden="true">3</div>
+          <div class="step-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2C6 2 2 7 2 12c0 5 4 10 10 10s10-5 10-10c0-5-4-10-10-10z"/><path d="M8 12l2.5 2.5L16 9"/></svg>
+          </div>
+          <div class="step-content">
             <h3>Enjoy Your Garden</h3>
-            <p>Sit back and enjoy a beautifully maintained garden. We'll keep it looking stunning all year round.</p>
+            <p>We do the hard work, you get to enjoy the results. A tidy, cared-for garden that makes you want to spend time outside — that's the goal every time.</p>
           </div>
-
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ═══════════════════════════════════════
-         SERVICE AREAS
-    ═══════════════════════════════════════ -->
-    <section id="areas" aria-labelledby="areas-heading">
-      <div class="container">
-        <div class="section-label scroll-reveal">Where We Work</div>
-        <h2 id="areas-heading" class="section-title scroll-reveal" style="--delay:0.1s">Serving the New Forest &amp; Waterside</h2>
-        <p class="section-sub scroll-reveal" style="--delay:0.15s">We cover homes and properties across Hampshire's beautiful New Forest and Waterside communities. Not sure if we cover your area? Just ask.</p>
-
-        <div class="areas-grid scroll-reveal" style="--delay:0.2s">
-          <span class="area-tag">Hythe</span>
-          <span class="area-tag">Totton</span>
-          <span class="area-tag">Dibden</span>
-          <span class="area-tag">Marchwood</span>
-          <span class="area-tag">Fawley</span>
-          <span class="area-tag">Calmore</span>
-          <span class="area-tag">Waterside</span>
-          <span class="area-tag">New Forest</span>
-          <span class="area-tag">Southampton</span>
-          <span class="area-tag">Bursledon</span>
-          <span class="area-tag">Hedge End</span>
-          <span class="area-tag">Beaulieu</span>
+  <!-- ── MEET THE GARDENER ─────────────────────────────────── -->
+  <section id="meet-the-gardener" class="section section--white" aria-labelledby="meet-heading">
+    <div class="container">
+      <div class="meet-grid">
+        <div class="meet-photo reveal">
+          <!-- Placeholder until real photo is provided -->
+          <div class="meet-photo-placeholder">
+            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+              <circle cx="32" cy="24" r="14" stroke="#7fa893" stroke-width="2"/>
+              <path d="M8 56c0-13.3 10.7-24 24-24s24 10.7 24 24" stroke="#7fa893" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span style="font-size:0.875rem">Founder photo coming soon</span>
+          </div>
         </div>
 
-        <div class="areas-cta scroll-reveal" style="--delay:0.3s">
-          <a href="#quote" class="btn btn--primary">Check My Area &amp; Get a Quote</a>
+        <div class="meet-content">
+          <span class="section-label reveal">The Person Behind the Work</span>
+          <h2 id="meet-heading" class="reveal delay-1">A local gardener who takes pride in every lawn.</h2>
+          <blockquote class="reveal delay-2">
+            "I started Pure Gardening because I genuinely love being outside, working with my hands, and seeing the difference a well-kept garden makes to a home. The New Forest is a beautiful part of the world — it deserves beautiful gardens."
+          </blockquote>
+          <p class="reveal delay-3">With over a decade spent caring for gardens across Hythe, Totton, Marchwood and beyond, we know these local conditions inside out. Every customer gets the same attention to detail — whether it's a quick weekly mow or a full seasonal transformation.</p>
+          <div class="meet-signature reveal delay-4">— Pure Gardening Company</div>
+          <div style="margin-top:1.5rem" class="reveal delay-5">
+            <a href="#contact" class="btn btn--forest">Work With Us</a>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ═══════════════════════════════════════
-         RECENT WORK GALLERY  (real photos)
-    ═══════════════════════════════════════ -->
-    <section id="gallery" aria-labelledby="gallery-heading">
-      <div class="gallery-header container">
-        <div class="section-label scroll-reveal">Recent Work</div>
-        <h2 id="gallery-heading" class="section-title scroll-reveal" style="--delay:0.1s">Gardens We've Transformed</h2>
-        <p class="section-sub scroll-reveal" style="--delay:0.15s">Real results from real gardens across the New Forest &amp; Waterside area.</p>
+  <!-- ── TESTIMONIALS ──────────────────────────────────────── -->
+  <section id="testimonials" class="section section--apricot" aria-labelledby="testimonials-heading">
+    <div class="container">
+      <header class="section-header">
+        <span class="section-label reveal">What Customers Say</span>
+        <h2 id="testimonials-heading" class="reveal delay-1">Neighbours who trust us with their gardens.</h2>
+      </header>
+
+      <div class="testimonials-grid">
+        <article class="testimonial-card reveal delay-1">
+          <div class="testimonial-stars" aria-label="5 stars out of 5">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 4.8 5.3.8-3.85 3.75.91 5.32L12 14.1l-4.76 2.55.91-5.32L4.3 7.6l5.3-.8z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 4.8 5.3.8-3.85 3.75.91 5.32L12 14.1l-4.76 2.55.91-5.32L4.3 7.6l5.3-.8z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 4.8 5.3.8-3.85 3.75.91 5.32L12 14.1l-4.76 2.55.91-5.32L4.3 7.6l5.3-.8z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 4.8 5.3.8-3.85 3.75.91 5.32L12 14.1l-4.76 2.55.91-5.32L4.3 7.6l5.3-.8z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 4.8 5.3.8-3.85 3.75.91 5.32L12 14.1l-4.76 2.55.91-5.32L4.3 7.6l5.3-.8z"/></svg>
+          </div>
+          <p class="testimonial-quote">I've tried several gardeners over the years and none have matched the standard. The lawn looks incredible — proper stripes, clean edges. They turn up every week without fail and the garden has never looked better.</p>
+          <div class="testimonial-footer">
+            <div class="testimonial-avatar" aria-hidden="true">SM</div>
+            <div class="testimonial-meta">
+              <strong>Sarah M.</strong>
+              <span>Hythe · Regular lawn care</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card reveal delay-2">
+          <div class="testimonial-stars" aria-label="5 stars out of 5">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 4.8 5.3.8-3.85 3.75.91 5.32L12 14.1l-4.76 2.55.91-5.32L4.3 7.6l5.3-.8z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 4.8 5.3.8-3.85 3.75.91 5.32L12 14.1l-4.76 2.55.91-5.32L4.3 7.6l5.3-.8z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 4.8 5.3.8-3.85 3.75.91 5.32L12 14.1l-4.76 2.55.91-5.32L4.3 7.6l5.3-.8z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 4.8 5.3.8-3.85 3.75.91 5.32L12 14.1l-4.76 2.55.91-5.32L4.3 7.6l5.3-.8z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 4.8 5.3.8-3.85 3.75.91 5.32L12 14.1l-4.76 2.55.91-5.32L4.3 7.6l5.3-.8z"/></svg>
+          </div>
+          <p class="testimonial-quote">Our garden was completely out of control — overgrown hedges, a jungle of a lawn, bits of old fencing. They cleared the whole lot in a day and took everything away. Brilliant from start to finish. Highly recommend.</p>
+          <div class="testimonial-footer">
+            <div class="testimonial-avatar" aria-hidden="true">JK</div>
+            <div class="testimonial-meta">
+              <strong>James K.</strong>
+              <span>Totton · Garden clearance</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card reveal delay-3">
+          <div class="testimonial-stars" aria-label="5 stars out of 5">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 4.8 5.3.8-3.85 3.75.91 5.32L12 14.1l-4.76 2.55.91-5.32L4.3 7.6l5.3-.8z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 4.8 5.3.8-3.85 3.75.91 5.32L12 14.1l-4.76 2.55.91-5.32L4.3 7.6l5.3-.8z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 4.8 5.3.8-3.85 3.75.91 5.32L12 14.1l-4.76 2.55.91-5.32L4.3 7.6l5.3-.8z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 4.8 5.3.8-3.85 3.75.91 5.32L12 14.1l-4.76 2.55.91-5.32L4.3 7.6l5.3-.8z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 4.8 5.3.8-3.85 3.75.91 5.32L12 14.1l-4.76 2.55.91-5.32L4.3 7.6l5.3-.8z"/></svg>
+          </div>
+          <p class="testimonial-quote">Always friendly, always punctual, always leaves the garden looking spotless. The hedge cutting in particular is superb — perfectly level every time. I wouldn't use anyone else. Top quality local service.</p>
+          <div class="testimonial-footer">
+            <div class="testimonial-avatar" aria-hidden="true">LP</div>
+            <div class="testimonial-meta">
+              <strong>Linda P.</strong>
+              <span>Marchwood · Hedge cutting &amp; lawn care</span>
+            </div>
+          </div>
+        </article>
       </div>
+    </div>
+  </section>
 
-      <div class="gallery-grid">
+  <!-- ── PORTFOLIO / BEFORE & AFTER ────────────────────────── -->
+  <section id="portfolio" class="section section--cream" aria-labelledby="portfolio-heading">
+    <div class="container">
+      <header class="section-header ba-section-intro">
+        <span class="section-label reveal">Garden Transformations</span>
+        <h2 id="portfolio-heading" class="reveal delay-1">Drag to reveal the difference.</h2>
+        <p class="reveal delay-2">Each of these gardens was transformed by our team. Slide the handle to see the before and after — then imagine what we could do for yours.</p>
+      </header>
 
-        <figure class="gallery-item scroll-reveal" style="--delay:0.05s">
-          <img
-            src="images/lawn-with-stripes.jpg"
-            alt="Perfectly striped lawn after professional mowing in the New Forest"
-            loading="lazy"
-            width="600"
-            height="400"
-          />
-          <figcaption class="gallery-overlay"><span>Lawn Stripes</span></figcaption>
-        </figure>
-
-        <figure class="gallery-item scroll-reveal" style="--delay:0.12s">
-          <img
-            src="images/stripes.jpg"
-            alt="Clean crisp lawn stripes — precision mowing by Pure Gardening"
-            loading="lazy"
-            width="600"
-            height="400"
-          />
-          <figcaption class="gallery-overlay"><span>Precision Mowing</span></figcaption>
-        </figure>
-
-        <figure class="gallery-item scroll-reveal" style="--delay:0.18s">
-          <img
-            src="images/landscaping.jpg"
-            alt="Garden landscaping and tidy-up work in Hampshire"
-            loading="lazy"
-            width="600"
-            height="400"
-          />
-          <figcaption class="gallery-overlay"><span>Garden Landscaping</span></figcaption>
-        </figure>
-
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════
-         BEFORE / AFTER  (real photos)
-    ═══════════════════════════════════════ -->
-    <section id="before-after" aria-labelledby="ba-heading">
-      <div class="container">
-        <div class="section-label scroll-reveal">Proof of Work</div>
-        <h2 id="ba-heading" class="section-title scroll-reveal" style="--delay:0.1s">Before &amp; After Transformations</h2>
-        <p class="section-sub scroll-reveal" style="--delay:0.15s">See the difference professional garden care makes. Real gardens, real results.</p>
-
-        <div class="ba-grid">
-
-          <div class="ba-card scroll-reveal" style="--delay:0.1s">
-            <div class="ba-img-wrap">
-              <img
-                src="images/before-after-1.jpg"
-                alt="Garden transformation — before and after comparison showing cleared and maintained lawn"
-                loading="lazy"
-                width="800"
-                height="500"
-              />
-              <span class="ba-tag">Transformation 1</span>
+      <div class="ba-grid">
+        <!-- Slider 1 -->
+        <div class="ba-item reveal delay-1">
+          <div class="ba-slider-wrap" data-slider role="img" aria-label="Before and after: garden clearance and lawn restoration in Hythe">
+            <div class="ba-before">
+              <picture>
+                <source srcset="images/before-after-1.webp" type="image/webp"/>
+                <img src="images/before-after-1.jpg" alt="Garden before clearance" loading="lazy" decoding="async"/>
+              </picture>
+              <span class="ba-label">Before</span>
             </div>
-            <div class="ba-caption">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              Garden clearance &amp; lawn restoration — New Forest area
+            <div class="ba-after">
+              <picture>
+                <source srcset="images/before-after-1.webp" type="image/webp"/>
+                <img src="images/before-after-1.jpg" alt="Garden after clearance and restoration" loading="lazy" decoding="async"/>
+              </picture>
+              <span class="ba-label">After</span>
             </div>
-          </div>
-
-          <div class="ba-card scroll-reveal" style="--delay:0.18s">
-            <div class="ba-img-wrap">
-              <img
-                src="images/before-after-2.jpg"
-                alt="Garden transformation — overgrown hedge trimmed back to a neat shape"
-                loading="lazy"
-                width="800"
-                height="500"
-              />
-              <span class="ba-tag">Transformation 2</span>
-            </div>
-            <div class="ba-caption">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              Hedge shaping &amp; border tidy — Hythe, Hampshire
-            </div>
-          </div>
-
-          <div class="ba-card scroll-reveal" style="--delay:0.26s">
-            <div class="ba-img-wrap">
-              <img
-                src="images/before-after-3.jpg"
-                alt="Garden transformation — neglected garden fully restored and tidied"
-                loading="lazy"
-                width="800"
-                height="500"
-              />
-              <span class="ba-tag">Transformation 3</span>
-            </div>
-            <div class="ba-caption">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              Full garden tidy-up — Totton, New Forest
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════
-         VAN TRUST CARD  (brand credibility)
-    ═══════════════════════════════════════ -->
-    <section id="van-trust" aria-labelledby="van-heading">
-      <div class="container">
-        <div class="van-card scroll-reveal">
-
-          <div class="van-img-wrap">
-            <img
-              src="images/van.jpg"
-              alt="Pure Gardening Company branded van — professional local gardening team"
-              loading="lazy"
-              width="700"
-              height="500"
-            />
-          </div>
-
-          <div class="van-content">
-            <div class="section-label">Your Local Team</div>
-            <h2 id="van-heading">Professional, Local &amp; Ready to Help</h2>
-            <p>We arrive fully equipped with everything needed to care for your garden — no corners cut, no mess left behind. When you see our van in your street, your neighbours will know you've made the right choice.</p>
-
-            <ul class="van-points">
-              <li>
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                Fully equipped — we bring everything
-              </li>
-              <li>
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                Licensed green waste removal
-              </li>
-              <li>
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                Always on time, always tidy
-              </li>
-              <li>
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                Serving your local area for over 10 years
-              </li>
-            </ul>
-
-            <a href="#quote" class="btn btn--primary">Book a Free Visit</a>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════
-         QUOTE / CTA
-    ═══════════════════════════════════════ -->
-    <section id="quote" aria-labelledby="quote-heading">
-      <div class="container">
-        <div class="quote-grid">
-
-          <div class="quote-left scroll-reveal">
-            <div class="section-label">Free Quote</div>
-            <h2 id="quote-heading">Ready to transform your garden?</h2>
-            <p>Get in touch today for a free, no-obligation quote. We'll visit your garden, understand what you need, and provide a clear, fair price.</p>
-
-            <div class="quote-contacts">
-              <a href="tel:07936314207" class="btn btn--call">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-                Call Now
-              </a>
-              <a href="https://wa.me/447936314207" class="btn btn--whatsapp" target="_blank" rel="noopener">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                WhatsApp
-              </a>
-              <a href="mailto:hello@puregardening.uk" class="btn btn--email">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                Email Us
-              </a>
-            </div>
-          </div>
-
-          <div class="quote-right scroll-reveal" style="--delay:0.15s">
-            <form id="quote-form" action="mailto:quotes@puregardening.uk" method="post" novalidate>
-              <h3 class="form-title">Send a Quick Request</h3>
-
-              <div class="form-group">
-                <label for="f-name">Your Name <span aria-hidden="true">*</span></label>
-                <input type="text" id="f-name" name="name" placeholder="e.g. Jane Smith" required autocomplete="name" />
+            <div class="ba-handle" aria-hidden="true">
+              <div class="ba-handle-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l-6-6 6-6M15 6l6 6-6 6"/></svg>
               </div>
+            </div>
+          </div>
+          <div class="ba-caption">
+            <svg class="ba-caption-pin" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            <div class="ba-caption-text">
+              <strong>Garden Clearance &amp; Lawn Restoration</strong>
+              <span>Hythe, Hampshire</span>
+            </div>
+          </div>
+        </div>
 
-              <div class="form-group">
-                <label for="f-location">Location <span aria-hidden="true">*</span></label>
-                <input type="text" id="f-location" name="location" placeholder="e.g. Hythe, New Forest" required autocomplete="address-level2" />
+        <!-- Slider 2 -->
+        <div class="ba-item reveal delay-2">
+          <div class="ba-slider-wrap" data-slider role="img" aria-label="Before and after: hedge shaping and border tidy in Totton">
+            <div class="ba-before">
+              <picture>
+                <source srcset="images/before-after-2.webp" type="image/webp"/>
+                <img src="images/before-after-2.jpg" alt="Hedge before shaping" loading="lazy" decoding="async"/>
+              </picture>
+              <span class="ba-label">Before</span>
+            </div>
+            <div class="ba-after">
+              <picture>
+                <source srcset="images/before-after-2.webp" type="image/webp"/>
+                <img src="images/before-after-2.jpg" alt="Hedge after shaping and border tidy" loading="lazy" decoding="async"/>
+              </picture>
+              <span class="ba-label">After</span>
+            </div>
+            <div class="ba-handle" aria-hidden="true">
+              <div class="ba-handle-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l-6-6 6-6M15 6l6 6-6 6"/></svg>
               </div>
+            </div>
+          </div>
+          <div class="ba-caption">
+            <svg class="ba-caption-pin" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            <div class="ba-caption-text">
+              <strong>Hedge Shaping &amp; Border Tidy</strong>
+              <span>Totton, Hampshire</span>
+            </div>
+          </div>
+        </div>
 
-              <div class="form-group">
-                <label for="f-work">Type of Work <span aria-hidden="true">*</span></label>
-                <select id="f-work" name="work" required>
-                  <option value="" disabled selected>Select a service…</option>
-                  <option>Grass Cutting</option>
-                  <option>Hedge Cutting</option>
-                  <option>Border Work &amp; Weeding</option>
-                  <option>Garden Clearance</option>
-                  <option>Garden Tidy Up</option>
-                  <option>Seasonal Preparation</option>
-                  <option>Other / Multiple Services</option>
+        <!-- Slider 3 -->
+        <div class="ba-item reveal delay-3">
+          <div class="ba-slider-wrap" data-slider role="img" aria-label="Before and after: full garden tidy in Marchwood">
+            <div class="ba-before">
+              <picture>
+                <source srcset="images/before-after-3.webp" type="image/webp"/>
+                <img src="images/before-after-3.jpg" alt="Garden before tidy up" loading="lazy" decoding="async"/>
+              </picture>
+              <span class="ba-label">Before</span>
+            </div>
+            <div class="ba-after">
+              <picture>
+                <source srcset="images/before-after-3.webp" type="image/webp"/>
+                <img src="images/before-after-3.jpg" alt="Garden after full tidy up" loading="lazy" decoding="async"/>
+              </picture>
+              <span class="ba-label">After</span>
+            </div>
+            <div class="ba-handle" aria-hidden="true">
+              <div class="ba-handle-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l-6-6 6-6M15 6l6 6-6 6"/></svg>
+              </div>
+            </div>
+          </div>
+          <div class="ba-caption">
+            <svg class="ba-caption-pin" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            <div class="ba-caption-text">
+              <strong>Full Garden Tidy-Up</strong>
+              <span>Marchwood, Hampshire</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── COVERAGE AREA ─────────────────────────────────────── -->
+  <section id="areas" class="section section--forest" aria-labelledby="areas-heading">
+    <div class="container">
+      <span class="section-label reveal" style="color:var(--amber-light)">Where We Work</span>
+      <h2 id="areas-heading" class="reveal delay-1" style="color:var(--white)">Serving the New Forest &amp; Waterside.</h2>
+      <p class="areas-lead reveal delay-2">We cover a wide area across south Hampshire — if you're not sure whether we reach you, just ask. We'll always let you know.</p>
+
+      <div class="areas-cloud reveal delay-2" role="list" aria-label="Areas we serve">
+        <span class="area-tag" role="listitem">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+          Hythe
+        </span>
+        <span class="area-tag" role="listitem">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+          Totton
+        </span>
+        <span class="area-tag" role="listitem">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+          Dibden
+        </span>
+        <span class="area-tag" role="listitem">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+          Marchwood
+        </span>
+        <span class="area-tag" role="listitem">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+          Fawley
+        </span>
+        <span class="area-tag" role="listitem">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+          Calmore
+        </span>
+        <span class="area-tag" role="listitem">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+          Waterside
+        </span>
+        <span class="area-tag" role="listitem">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+          New Forest
+        </span>
+        <span class="area-tag" role="listitem">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+          Southampton
+        </span>
+        <span class="area-tag" role="listitem">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+          Bursledon
+        </span>
+        <span class="area-tag" role="listitem">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+          Hedge End
+        </span>
+        <span class="area-tag" role="listitem">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+          Beaulieu
+        </span>
+      </div>
+
+      <div class="reveal delay-3">
+        <a href="#contact" class="btn btn--primary btn--lg">Check My Area &amp; Get a Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT / QUOTE FORM ──────────────────────────────── -->
+  <section id="contact" class="section section--white" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Sidebar -->
+        <div class="contact-sidebar">
+          <span class="section-label reveal">Free Quote</span>
+          <h2 id="contact-heading" class="reveal delay-1">Let's talk about your garden.</h2>
+          <p class="reveal delay-2">Fill in the form and we'll get back to you — usually the same day. Or if you'd rather talk straight away, give us a call or drop us a WhatsApp.</p>
+
+          <div class="contact-options reveal delay-2">
+            <a href="tel:+447936314207" class="contact-option">
+              <div class="contact-option-icon contact-option-icon--phone" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.01 2.22 2 2 0 012 .04h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>
+              </div>
+              <div class="contact-option-text">
+                <strong>Call us directly</strong>
+                <span>07936 314207</span>
+              </div>
+            </a>
+
+            <a href="https://wa.me/447936314207?text=Hi!%20I%20found%20your%20website%20and%20I%27m%20interested%20in%20a%20free%20garden%20quote." class="contact-option" target="_blank" rel="noopener">
+              <div class="contact-option-icon contact-option-icon--wa" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.12 1.524 5.855L0 24l6.335-1.509A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.89 0-3.663-.5-5.197-1.375l-.373-.22-3.863.92.979-3.768-.243-.387A9.953 9.953 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+              </div>
+              <div class="contact-option-text">
+                <strong>WhatsApp message</strong>
+                <span>Usually replies within the hour</span>
+              </div>
+            </a>
+
+            <a href="mailto:quotes@puregardening.uk" class="contact-option">
+              <div class="contact-option-icon contact-option-icon--email" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 8l10 7 10-7"/></svg>
+              </div>
+              <div class="contact-option-text">
+                <strong>Email us</strong>
+                <span>quotes@puregardening.uk</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quote Form -->
+        <div class="quote-form-card reveal delay-2">
+          <h3>Tell us about your garden</h3>
+
+          <form id="quote-form" novalidate aria-label="Free quote request form">
+            <div class="form-group">
+              <label class="form-label" for="name">Your name <span class="required" aria-hidden="true">*</span></label>
+              <input class="form-input" type="text" id="name" name="name" placeholder="e.g. Sarah Johnson" required autocomplete="name" />
+              <span class="form-error" id="name-error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="location">Your location <span class="required" aria-hidden="true">*</span></label>
+              <input class="form-input" type="text" id="location" name="location" placeholder="e.g. Hythe, Southampton" required autocomplete="address-level2" />
+              <span class="form-error" id="location-error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="service">Type of work <span class="required" aria-hidden="true">*</span></label>
+              <div class="form-select-wrap">
+                <select class="form-select" id="service" name="service" required>
+                  <option value="" disabled selected>Choose a service…</option>
+                  <option value="grass-cutting">Grass Cutting</option>
+                  <option value="hedge-cutting">Hedge Cutting</option>
+                  <option value="border-weeding">Border Work &amp; Weeding</option>
+                  <option value="clearance">Garden Clearance</option>
+                  <option value="tidy-up">Garden Tidy Up</option>
+                  <option value="seasonal">Seasonal Preparation</option>
+                  <option value="multiple">Multiple Services</option>
+                  <option value="not-sure">Not Sure — Happy to Advise</option>
                 </select>
               </div>
+              <span class="form-error" id="service-error" role="alert" aria-live="polite"></span>
+            </div>
 
-              <div class="form-group">
-                <label>Preferred Contact Method</label>
-                <div class="radio-group">
-                  <label class="radio-label"><input type="radio" name="contact-pref" value="call" checked /> Call</label>
-                  <label class="radio-label"><input type="radio" name="contact-pref" value="whatsapp" /> WhatsApp</label>
-                  <label class="radio-label"><input type="radio" name="contact-pref" value="email" /> Email</label>
+            <div class="form-group">
+              <fieldset>
+                <legend class="form-label">Preferred contact method</legend>
+                <div class="form-checkboxes">
+                  <label class="form-checkbox-label">
+                    <input type="checkbox" name="contact_method" value="phone" />
+                    Phone call
+                  </label>
+                  <label class="form-checkbox-label">
+                    <input type="checkbox" name="contact_method" value="whatsapp" checked />
+                    WhatsApp
+                  </label>
+                  <label class="form-checkbox-label">
+                    <input type="checkbox" name="contact_method" value="email" />
+                    Email
+                  </label>
                 </div>
-              </div>
+              </fieldset>
+            </div>
 
-              <button type="submit" class="btn btn--primary btn--full">Send Request</button>
+            <div class="form-group">
+              <label class="form-label" for="message">Anything else we should know?</label>
+              <textarea class="form-textarea" id="message" name="message" placeholder="e.g. Garden size, how often you'd like visits, anything specific you'd like done…"></textarea>
+            </div>
 
-              <div id="form-success" class="form-success" hidden role="alert">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                <span>Thank you! We'll be in touch very soon.</span>
-              </div>
-            </form>
+            <div class="form-submit-row">
+              <button type="submit" class="btn btn--primary btn--lg" id="form-submit">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                Send My Quote Request
+              </button>
+              <p class="form-disclaimer">We'll get back to you within a few hours. No spam, ever.</p>
+            </div>
+          </form>
+
+          <div class="form-success" id="form-success" aria-live="polite">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#4a7c59" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>
+            <strong>Request sent!</strong>
+            <p style="max-width:none;color:var(--moss);font-size:0.9rem;margin-top:0.25rem">We'll be in touch shortly — usually within a few hours. Thanks for getting in touch.</p>
           </div>
-
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-  </main>
+</main>
 
-  <!-- ═══════════════════════════════════════
-       FOOTER
-  ═══════════════════════════════════════ -->
-  <footer id="footer" role="contentinfo">
+<!-- ══════════════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════════════ -->
+<footer role="contentinfo">
+  <div class="footer-amber-stripe" aria-hidden="true"></div>
+  <div class="footer-inner">
     <div class="container">
       <div class="footer-grid">
-
-        <div class="footer-brand">
-          <div class="footer-logo">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/><path d="M12 2c0 0-4 4-4 10s4 10 4 10"/><path d="M2 12h20"/><path d="M12 2c0 0 4 4 4 10s-4 10-4 10"/></svg>
-            Pure Gardening Company
+        <!-- Brand col -->
+        <div class="footer-logo-col">
+          <div class="footer-logo-wrap">
+            <svg width="32" height="32" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+              <circle cx="18" cy="18" r="18" fill="#d4a574" opacity="0.18"/>
+              <path d="M18 7C18 7 10 13 10 20a8 8 0 0016 0C26 13 18 7 18 7z" fill="#d4a574"/>
+              <rect x="17" y="20" width="2" height="8" rx="1" fill="white"/>
+            </svg>
+            <div>
+              <span class="footer-logo-name">Pure Gardening Company</span>
+              <span class="footer-logo-sub">New Forest &amp; Waterside</span>
+            </div>
           </div>
-          <p class="footer-tagline">Serving the New Forest &amp; Waterside area.</p>
-          <address class="footer-address">
-            <a href="tel:07936314207" class="footer-phone">07936 314207</a>
-            <a href="mailto:hello@puregardening.uk" class="footer-email">hello@puregardening.uk</a>
-          </address>
+          <p class="footer-tagline">Keeping gardens beautiful across Hampshire, one lawn at a time.</p>
+          <div class="footer-contact-links">
+            <a href="tel:+447936314207">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.01 2.22 2 2 0 012 .04h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>
+              07936 314207
+            </a>
+            <a href="mailto:hello@puregardening.uk">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 8l10 7 10-7"/></svg>
+              hello@puregardening.uk
+            </a>
+          </div>
         </div>
 
-        <div class="footer-areas">
-          <h3 class="footer-col-title">Areas We Cover</h3>
-          <ul class="footer-areas-list">
-            <li>Hythe</li>
-            <li>Totton</li>
-            <li>Dibden</li>
-            <li>Marchwood</li>
-            <li>Fawley</li>
-            <li>Calmore</li>
-            <li>New Forest</li>
-            <li>Southampton</li>
+        <!-- Services col -->
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul role="list">
+            <li><a href="#services">Grass Cutting</a></li>
+            <li><a href="#services">Hedge Cutting</a></li>
+            <li><a href="#services">Border Work</a></li>
+            <li><a href="#services">Garden Clearances</a></li>
+            <li><a href="#services">Garden Tidy Ups</a></li>
+            <li><a href="#services">Seasonal Prep</a></li>
           </ul>
         </div>
 
-        <div class="footer-connect">
-          <h3 class="footer-col-title">Follow Us</h3>
-          <div class="footer-social">
-            <a href="https://www.facebook.com/puregardeningco" target="_blank" rel="noopener" aria-label="Facebook" class="footer-social-btn footer-social-btn--fb">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-              Facebook
-            </a>
-            <a href="https://tiktok.com/@puregardening" target="_blank" rel="noopener" aria-label="TikTok" class="footer-social-btn footer-social-btn--tt">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.97a8.24 8.24 0 004.84 1.55V7.07a4.85 4.85 0 01-1.07-.38z"/></svg>
-              TikTok
-            </a>
-          </div>
+        <!-- Areas col -->
+        <div class="footer-col">
+          <h4>Areas</h4>
+          <ul role="list">
+            <li><a href="#areas">Hythe</a></li>
+            <li><a href="#areas">Totton</a></li>
+            <li><a href="#areas">Dibden</a></li>
+            <li><a href="#areas">Marchwood</a></li>
+            <li><a href="#areas">Fawley</a></li>
+            <li><a href="#areas">Waterside</a></li>
+            <li><a href="#areas">Southampton</a></li>
+            <li><a href="#areas">New Forest</a></li>
+          </ul>
         </div>
 
+        <!-- Social col -->
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="footer-social">
+            <a href="#" class="footer-social-link" aria-label="Pure Gardening on Facebook" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Pure Gardening on TikTok" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.77 1.52V6.76a4.85 4.85 0 01-1-.07z"/></svg>
+            </a>
+          </div>
+          <div style="margin-top:1.25rem">
+            <h4>Get a Quote</h4>
+            <a href="#contact" class="btn btn--primary btn--sm" style="margin-top:0.5rem">Free Quote</a>
+          </div>
+        </div>
       </div>
 
       <div class="footer-bottom">
-        <span>&copy; 2026 Pure Gardening Company. All rights reserved.</span>
-        <span class="footer-power">Powered by <a href="https://gardenos.co" target="_blank" rel="noopener" class="footer-gardenos">GardenOS</a></span>
+        <p>&copy; <span id="footer-year"></span> Pure Gardening Company. All rights reserved.<br>
+          <a href="#" style="margin-left:0.25rem">Powered by GardenOS</a>
+        </p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms &amp; Conditions</a>
+        </div>
       </div>
     </div>
-  </footer>
+  </div>
+</footer>
 
-  <script src="script.js"></script>
+<!-- ══════════════════════════════════════════════════════════
+     WHATSAPP FAB
+══════════════════════════════════════════════════════════ -->
+<a href="https://wa.me/447936314207?text=Hi!%20I%20found%20your%20website%20and%20I%27m%20interested%20in%20garden%20services." class="wa-fab" id="wa-fab" aria-label="Contact us on WhatsApp" target="_blank" rel="noopener">
+  <div class="wa-fab-pulse" aria-hidden="true"></div>
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.12 1.524 5.855L0 24l6.335-1.509A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.89 0-3.663-.5-5.197-1.375l-.373-.22-3.863.92.979-3.768-.243-.387A9.953 9.953 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+</a>
+<button class="wa-fab-dismiss" id="wa-fab-dismiss" aria-label="Dismiss WhatsApp button">✕</button>
+
+<!-- ══════════════════════════════════════════════════════════
+     LIGHTBOX
+══════════════════════════════════════════════════════════ -->
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <div class="lightbox-inner">
+    <img id="lightbox-img" src="" alt="" />
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close image viewer">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+</div>
+
+<script src="script.js" defer></script>
 </body>
 </html>
