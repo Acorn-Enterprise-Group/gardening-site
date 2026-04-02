@@ -954,6 +954,11 @@ p { color: var(--text-secondary); max-width: 68ch; }
   border-color: var(--amber);
   box-shadow: 0 0 0 3px rgba(212,165,116,0.10);
 }
+/* Non-interactive email display — no cursor or hover effect */
+.contact-option--static {
+  cursor: default;
+  pointer-events: none;
+}
 .contact-option-icon {
   width: 44px; height: 44px;
   border-radius: 50%;
@@ -1072,6 +1077,7 @@ p { color: var(--text-secondary); max-width: 68ch; }
 .form-success.is-visible { display: block; }
 .form-success svg { margin: 0 auto 0.75rem; }
 .form-success-note { max-width: none; color: var(--moss); font-size: 0.9rem; margin-top: 0.25rem; }
+.form-success-note a { color: inherit; font-weight: 600; }
 .form-disclaimer { font-size: 0.8rem; color: var(--silver); text-align: center; }
 
 .form-submit-error {
@@ -1380,25 +1386,44 @@ footer { background: var(--forest); }
 
 /* ── Mobile Sticky CTA Bar ──────────────────────────────────── */
 .mobile-cta-bar {
+  /* Hidden on desktop — shown only in the media query below */
   display: none;
-  position: fixed;
-  bottom: 0; left: 0; right: 0;
-  z-index: 700;
-  padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom));
-  background: var(--white);
-  border-top: 1px solid var(--mint);
-  box-shadow: 0 -4px 20px rgba(26,58,46,0.10);
-  gap: 0.625rem;
-}
-.mobile-cta-bar-btn {
-  flex: 1;
-  justify-content: center;
-  gap: 0.4rem;
 }
 @media (max-width: 767px) {
-  .mobile-cta-bar { display: flex; }
-  /* Push footer above the sticky bar so it isn't covered */
-  footer { padding-bottom: calc(4rem + env(safe-area-inset-bottom)); }
+  .mobile-cta-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 700;
+    /* 0.75rem top padding, then safe-area on bottom for iPhone notch */
+    padding: 0.75rem 1rem;
+    padding-bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));
+    background: var(--white);
+    border-top: 1px solid var(--mint);
+    box-shadow: 0 -4px 20px rgba(26,58,46,0.10);
+    gap: 0.75rem;
+    /* Force children to share space equally */
+    align-items: stretch;
+  }
+  .mobile-cta-bar-btn {
+    /* Override inline-flex so the button fills its flex slot */
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    /* Taller tap target than btn--sm */
+    padding: 0.7rem 0.5rem;
+    font-size: 0.9rem;
+    /* Disable the upward hover lift — looks broken on fixed elements */
+    transform: none !important;
+    white-space: nowrap;
+  }
+  /* Prevent WA FAB from clashing with the bar */
+  .wa-fab { bottom: calc(5rem + env(safe-area-inset-bottom, 0px)); }
+  /* Ensure footer content isn't hidden behind the bar */
+  footer { padding-bottom: calc(4.5rem + env(safe-area-inset-bottom, 0px)); }
 }
 
 /* ── Responsive 1024px ──────────────────────────────────────── */

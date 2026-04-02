@@ -280,53 +280,69 @@ document.querySelectorAll('.why-mosaic-img img, .ba-slider-wrap img').forEach(im
     return valid;
   }
 
+  const API_ENDPOINT = 'https://api.gardenos.co/v1/leads';
+  const submitErrEl  = document.getElementById('form-submit-error');
+
+  const SUBMIT_SVG = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>`;
+
+  function resetBtn(label) {
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = `${SUBMIT_SVG} ${label}`;
+  }
+
+  function showError() {
+    if (submitErrEl) submitErrEl.style.display = 'flex';
+    resetBtn('Try Again');
+  }
+
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     if (!validate()) return;
 
-    // Collect form data
-    const contactMethods = Array.from(
-      form.querySelectorAll('input[name="contact_method"]:checked')
-    ).map(cb => cb.value);
+    // Hide any previous error state
+    if (submitErrEl) submitErrEl.style.display = 'none';
 
     const payload = {
-      name:           fields.name.el.value.trim(),
-      location:       fields.location.el.value.trim(),
-      service:        fields.service.el.value,
-      contact_method: contactMethods,
-      message:        (form.querySelector('#message') || {}).value || '',
-      source:         'puregardening.uk',
-      timestamp:      new Date().toISOString(),
+      name:              fields.name.el.value.trim(),
+      location:          fields.location.el.value.trim(),
+      service:           fields.service.el.value,
+      contactPreference: Array.from(form.querySelectorAll('input[name="contact_method"]:checked')).map(cb => cb.value),
+      message:           form.querySelector('#message')?.value.trim() || '',
     };
 
-    // Disable submit button
-    const submitErrEl = document.getElementById('form-submit-error');
-    if (submitErrEl) submitErrEl.style.display = 'none';
+    console.log('[PureGardening] Submitting payload:', payload);
 
     submitBtn.disabled = true;
     submitBtn.textContent = 'Sending…';
 
-    const API_ENDPOINT = 'https://api.gardenos.co/v1/leads';
+    // TEMPORARY: using no-cors + text/plain to avoid CORS preflight failure.
+    // The response is always opaque — we cannot verify whether the server
+    // processed the lead. This MUST be replaced with either:
+    //   (a) CORS headers on api.gardenos.co, or
+    //   (b) a Cloudflare Worker relay, or
+    //   (c) a Formspree endpoint
+    // Until then, the success message intentionally avoids claiming delivery.
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 10000); // 10s hard timeout
 
     try {
-      const res = await fetch(API_ENDPOINT, {
+      await fetch(API_ENDPOINT, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
+        mode:   'no-cors',
+        headers: { 'Content-Type': 'text/plain;charset=UTF-8' },
+        body:    JSON.stringify(payload),
+        signal:  controller.signal,
       });
 
-      if (res.ok || res.status === 201) {
-        // Success
-        form.style.display = 'none';
-        if (success) success.classList.add('is-visible');
-      } else {
-        throw new Error('Server error ' + res.status);
-      }
+      clearTimeout(timeout);
+      console.log('[PureGardening] Request dispatched (response opaque — delivery unverified).');
+      form.style.display = 'none';
+      if (success) success.classList.add('is-visible');
     } catch (err) {
-      // Show inline error — do not open mailto
-      if (submitErrEl) submitErrEl.style.display = 'flex';
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg> Try Again`;
+      clearTimeout(timeout);
+      // Fires on network failure OR timeout (AbortError)
+      console.error('[PureGardening] Submission failed:', err.name, err.message);
+      showError();
     }
   });
 })();
