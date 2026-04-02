@@ -273,7 +273,8 @@ p { color: var(--text-secondary); max-width: 68ch; }
   flex-shrink: 0;
   text-decoration: none;
 }
-.nav-logo svg { flex-shrink: 0; }
+.nav-logo svg,
+.nav-logo-img { flex-shrink: 0; border-radius: 4px; }
 .nav-logo-name {
   font-family: 'Fraunces', Georgia, serif;
   font-size: 1.0625rem;
@@ -1070,7 +1071,25 @@ p { color: var(--text-secondary); max-width: 68ch; }
 }
 .form-success.is-visible { display: block; }
 .form-success svg { margin: 0 auto 0.75rem; }
+.form-success-note { max-width: none; color: var(--moss); font-size: 0.9rem; margin-top: 0.25rem; }
 .form-disclaimer { font-size: 0.8rem; color: var(--silver); text-align: center; }
+
+.form-submit-error {
+  display: none;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: rgba(220,38,38,0.06);
+  border: 1px solid rgba(220,38,38,0.25);
+  border-radius: var(--radius-sm);
+  color: #b91c1c;
+  font-size: 0.9rem;
+  margin-top: 0.75rem;
+}
+.form-submit-error strong { display: block; margin-bottom: 0.35rem; }
+.form-submit-error svg { flex-shrink: 0; margin-top: 0.15rem; }
+.form-submit-error-links { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; margin-top: 0.5rem; }
+.form-submit-error-links a { color: #b91c1c; font-weight: 600; text-decoration: underline; }
 
 /* ── WhatsApp FAB ───────────────────────────────────────────── */
 .wa-fab {
@@ -1348,6 +1367,38 @@ footer { background: var(--forest); }
 /* ── Responsive 768px ───────────────────────────────────────── */
 @media (min-width: 768px) {
   .contact-grid { grid-template-columns: 1fr 1.3fr; }
+}
+
+/* ── Footer CTA column ──────────────────────────────────────── */
+.footer-cta-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  margin-top: 0.5rem;
+}
+.footer-cta-col .btn { justify-content: flex-start; }
+
+/* ── Mobile Sticky CTA Bar ──────────────────────────────────── */
+.mobile-cta-bar {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 700;
+  padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom));
+  background: var(--white);
+  border-top: 1px solid var(--mint);
+  box-shadow: 0 -4px 20px rgba(26,58,46,0.10);
+  gap: 0.625rem;
+}
+.mobile-cta-bar-btn {
+  flex: 1;
+  justify-content: center;
+  gap: 0.4rem;
+}
+@media (max-width: 767px) {
+  .mobile-cta-bar { display: flex; }
+  /* Push footer above the sticky bar so it isn't covered */
+  footer { padding-bottom: calc(4rem + env(safe-area-inset-bottom)); }
 }
 
 /* ── Responsive 1024px ──────────────────────────────────────── */

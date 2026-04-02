@@ -300,11 +300,16 @@ document.querySelectorAll('.why-mosaic-img img, .ba-slider-wrap img').forEach(im
     };
 
     // Disable submit button
+    const submitErrEl = document.getElementById('form-submit-error');
+    if (submitErrEl) submitErrEl.style.display = 'none';
+
     submitBtn.disabled = true;
     submitBtn.textContent = 'Sending…';
 
+    const API_ENDPOINT = 'https://api.gardenos.co/v1/leads';
+
     try {
-      const res = await fetch('https://api.gardenos.co/v1/leads', {
+      const res = await fetch(API_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
@@ -318,18 +323,10 @@ document.querySelectorAll('.why-mosaic-img img, .ba-slider-wrap img').forEach(im
         throw new Error('Server error ' + res.status);
       }
     } catch (err) {
-      // Fallback: open mailto
-      const subject = encodeURIComponent('Garden Quote Request - ' + payload.name);
-      const body = encodeURIComponent(
-        `Name: ${payload.name}\nLocation: ${payload.location}\nService: ${payload.service}\nContact preference: ${contactMethods.join(', ') || 'Not specified'}\n\nMessage:\n${payload.message}`
-      );
-      window.location.href = `mailto:quotes@puregardening.uk?subject=${subject}&body=${body}`;
-
-      // Re-enable button
+      // Show inline error — do not open mailto
+      if (submitErrEl) submitErrEl.style.display = 'flex';
       submitBtn.disabled = false;
-      submitBtn.innerHTML = `
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-        Send My Quote Request`;
+      submitBtn.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg> Try Again`;
     }
   });
 })();
