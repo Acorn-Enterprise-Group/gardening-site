@@ -225,6 +225,16 @@ p { color: var(--text-secondary); max-width: 68ch; }
   color: var(--forest);
   border-color: var(--mint);
 }
+
+/* Footer sits on the forest background, so keep its outline CTA readable. */
+.footer-cta-col .btn--outline {
+  color: var(--white);
+  border-color: rgba(255,255,255,0.5);
+}
+.footer-cta-col .btn--outline:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.8);
+}
 .btn--outline:hover {
   background: var(--mint);
   border-color: var(--sage);
@@ -378,6 +388,31 @@ p { color: var(--text-secondary); max-width: 68ch; }
   border-bottom: 1px solid var(--mint);
   min-height: var(--nav-height);
 }
+.mobile-nav-header .nav-logo {
+  min-width: 0;
+  gap: 0.625rem;
+}
+.mobile-nav-header .nav-logo-img {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  object-fit: contain;
+}
+.mobile-nav-header .nav-logo > span {
+  min-width: 0;
+}
+.mobile-nav-header .nav-logo-name,
+.mobile-nav-header .nav-logo-sub {
+  white-space: nowrap;
+}
+.mobile-nav-header .nav-logo-name {
+  color: var(--forest);
+  line-height: 1.1;
+}
+.mobile-nav-header .nav-logo-sub {
+  color: var(--slate);
+  line-height: 1.2;
+}
 .mobile-nav-close {
   width: 44px; height: 44px;
   display: flex; align-items: center; justify-content: center;
@@ -385,6 +420,11 @@ p { color: var(--text-secondary); max-width: 68ch; }
   color: var(--charcoal);
   font-size: 1.25rem;
   transition: background var(--duration);
+}
+.mobile-nav-close svg {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
 }
 .mobile-nav-close:hover { background: var(--cream); }
 .mobile-nav-close:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
