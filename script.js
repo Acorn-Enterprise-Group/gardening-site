@@ -106,7 +106,7 @@ document.addEventListener('keydown', (e) => {
 // Close on outside click
 document.addEventListener('click', (e) => {
   if (mobileNav && mobileNav.classList.contains('is-open')) {
-    if (!mobileNav.contains(e.target) && e.target !== navToggle) {
+    if (!mobileNav.contains(e.target) && !navToggle.contains(e.target)) {
       closeMobileNav();
     }
   }
